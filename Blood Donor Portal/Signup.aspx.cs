@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Configuration;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
+using System.Data.SqlClient;
 namespace Blood_Donor_Portal
 {
     public partial class Signup : System.Web.UI.Page
     {
-        
-       protected void Page_Load(object sender, EventArgs e)
+
+        protected void Page_Load(object sender, EventArgs e)
         {
         }
 
@@ -22,10 +15,11 @@ namespace Blood_Donor_Portal
             string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into Users values ('"+mail.Text+"','"+uname.Text+"','"+pwd.Text+"')",con);
+            SqlCommand cmd = new SqlCommand("insert into Users values ('" + mail.Text + "','" + uname.Text + "','" + pwd.Text + "')", con);
             cmd.ExecuteNonQuery();
-            RegisterStartupScript("s","<script> alert('Registered Successfully')</script>");
+            //msg.Text = "User Registration Successfull";
             Response.Redirect("login.aspx");
+
         }
     }
 }

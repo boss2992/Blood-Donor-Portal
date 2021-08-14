@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Home.html" />
     <Content Include="Img\avatar.svg" />
     <Content Include="Img\bg.svg" />
     <Content Include="Img\loginfigma.svg" />

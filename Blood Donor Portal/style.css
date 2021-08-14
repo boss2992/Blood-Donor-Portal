@@ -15,7 +15,11 @@ body {
     bottom: 0;
     z-index: -1;
 }
-
+.center{
+    margin:0 auto;
+    text-align:center;
+    font-family: "Poppins", sans-serif;
+}
 .container {
     width: 100vw;
     height: 100vh;

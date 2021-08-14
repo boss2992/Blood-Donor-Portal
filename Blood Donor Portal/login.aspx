@@ -47,7 +47,7 @@
             </div>
           </div>
           <a id="frgtpwd" href="#">Forgot Password?</a>
-   <asp:Button ID="loginbtn" class="btn" runat="server" Text="Login" />
+   <asp:Button ID="loginbtn" class="btn" runat="server" Text="Login" OnClick="loginbtn_Click" />
 
           <h3>New User ? then <a href="signup.aspx">Signup</a></h3>
         </form>

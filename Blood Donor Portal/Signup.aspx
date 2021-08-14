@@ -14,7 +14,8 @@
     />
 </head>
 <body>
-    <img class="wave" src="Img/wave.png" />
+    <%--<img class="wave" src="Img/wave.png"/>--%>
+    <asp:Image CssClass="wave" ImageUrl="Img/wave.png" runat="server"/>
     <div class="container">
       <div class="img">
         <img src="Img/bg.svg" />
@@ -67,9 +68,10 @@
           </div>
            <asp:Button ID="signupbtn" class="btn" runat="server" Text="Sign Up" OnClick="signupbtn_Click" />
           <h3>Already Registered ? then <a href="login.aspx">Login</a></h3>
-    
-            
-          <asp:CompareValidator ID="pwdchecker" runat="server" ErrorMessage="Passwords didnt match" ControlToCompare="pwd" ControlToValidate="cpwd" Operator="Equal" Font-Names="Cascadia Code PL SemiBold" ForeColor="#FF3535"></asp:CompareValidator>
+          <asp:CompareValidator ID="pwdchecker" runat="server" ErrorMessage="Passwords didn't match" ControlToCompare="pwd" ControlToValidate="cpwd" Operator="Equal" Font-Names="Leelawadee UI" ForeColor="#EC5858" Font-Bold="True"></asp:CompareValidator>
+
+            <br />
+            <br />
 
         </form>
       </div>

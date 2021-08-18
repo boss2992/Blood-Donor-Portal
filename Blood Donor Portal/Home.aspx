@@ -28,7 +28,7 @@
          <div class="Homebox">
         <div class="content">
             <h2>Welcome Baskar</h2>
-            <p>Every Blood donor is a life saver so donate blood and save lives, every drop counts, become become a donor today.</p>
+            <p>Every Blood donor is a life saver so donate blood and save lives, every drop counts, become a donor today.</p>
             <div class="homebtn">
                 <a href="#donor" class="donor">Donate Now</a>
                 <a href="#search" class="search">Need a Donor</a>

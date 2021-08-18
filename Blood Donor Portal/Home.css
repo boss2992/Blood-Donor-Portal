@@ -1,0 +1,202 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:ital,wght@0,100;0,500;1,100&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x:hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    width: 100vw;
+    min-height: 100vh;
+}
+.Homebox{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    height:95vh;
+    width:1400px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.scroll {
+    background-color: rgb(252, 246, 246);
+}
+
+.header .logo {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header .logo a {
+        text-align: center;
+        color: #EC6161;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 1px;
+}
+
+ .header .logo .img {
+        width: 45px;
+        margin-top: 6px;
+        margin-left: 70px;
+ }
+
+.header .nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+    .header .nav a {
+        color: #EC6161;
+        font-family: 'Poppins', sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        position: relative;
+        letter-spacing: 1px;
+    }
+
+        .header .nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0%;
+            height: 2px;
+            background-color: #EC6161;
+            border-radius: 3px;
+            transition: 0.5s;
+        }
+
+        .header .nav a:hover:not(.signout)::before {
+            width: 100%;
+            left: 0%;
+        }
+
+    .header .nav .signout {
+        background-color: #EC6161;
+        color: rgb(250, 249, 249);
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        padding: 5px 8px;
+        border-radius: 30px;
+        transition: 0.5s;
+        border: 2px solid white;
+    }
+
+        .header .nav .signout:hover {
+            background-color: white;
+            color: #EC6161;
+            border: 2px solid #EC6161;
+        }
+
+.content {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:flex-start;
+    height:300px;
+    width:500px;
+}
+
+
+
+    .content h2 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #EC6161
+    }
+    .content p{
+        font-size: 18px;
+        color:#555;
+        text-align:left;
+        max-width:430px;
+    }
+    .content .homebtn {
+        display: flex;
+    }
+        .content .homebtn .donor {
+            text-align: center;
+            font-size: 16px;
+            border: 2px solid #e92323;
+            padding: 4px;
+            border-radius: 25px;
+            margin-right: 10px;
+            letter-spacing: 1px;
+            background-color: #e92323;
+            color: white;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+            .content .homebtn .donor.donor::before {
+                content: '';
+                position: absolute;
+                border-radius: 25px;
+                width: 0%;
+                height: 100%;
+                top: 100%;
+                left: 0%;
+                background-color: rgba(228, 220, 220, 0.267);
+                transition: 0.5s;
+            }
+
+            .content .homebtn .donor.donor:hover::before {
+                width: 100%;
+                top: 0;
+            }
+
+        .content .homebtn .search {
+            text-align: center;
+            font-size: 16px;
+            border: 2px solid #e92323;
+            color: #e92323;
+            padding: 4px;
+            letter-spacing: 1px;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s
+        }
+.homebtn .search:hover {
+    color: white;
+    background-color: #EC6161;
+    transition:all 0.3s
+}
+.img-container {
+    width: 600px;
+    height: 600px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+    .img-container img {
+        height: 600px;
+        width: 600px;
+    }

@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using Blood_Donor_Portal_BL;
 
 namespace Blood_Donor_Portal
 {
-    
-    public partial class login : System.Web.UI.Page
+    public partial class Admin_login : System.Web.UI.Page
     {
         LoginAndSignup obj = new LoginAndSignup();
         protected void Page_Load(object sender, EventArgs e)
@@ -15,11 +17,11 @@ namespace Blood_Donor_Portal
         }
 
         protected void loginbtn_Click(object sender, EventArgs e)
-        {                                
-            bool LegitUser = obj.ValidateLogin(uname.Text, pwd.Text);
-            if (LegitUser)
+        {
+            bool LegitAdmin = obj.ValidateAdmin(uname.Text, pwd.Text);
+            if (LegitAdmin)
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("AdminPanel.aspx");
             }
 
             else

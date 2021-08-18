@@ -67,10 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Home.html" />
+    <Content Include="AdminPanel.aspx" />
+    <Content Include="AdminPanel.css" />
+    <Content Include="AdminPanel.js" />
+    <Content Include="Admin_login.aspx" />
+    <Content Include="Admin_login.js" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home.css" />
+    <Content Include="Home.js" />
+    <Content Include="Img\admin1.svg" />
     <Content Include="Img\avatar.svg" />
     <Content Include="Img\bg.svg" />
+    <Content Include="Img\logo.svg" />
     <Content Include="Img\loginfigma.svg" />
+    <Content Include="Img\Homebg.svg" />
     <Content Include="Img\wave.png" />
     <Content Include="login.aspx" />
     <Content Include="login.js" />
@@ -80,7 +90,28 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_login.aspx.cs">
+      <DependentUpon>Admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_login.aspx.designer.cs">
+      <DependentUpon>Admin_login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\BusinessLogic.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

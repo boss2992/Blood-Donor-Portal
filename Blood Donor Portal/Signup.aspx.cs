@@ -14,8 +14,7 @@ namespace Blood_Donor_Portal
         protected void signupbtn_Click(object sender, EventArgs e)
         {
             string email = mail.Text;
-            string srch_qry = "Select Mail from Users where Mail='" + mail.Text + "'";
-            bool Alreay_A_Member = obj.ExistingUser(srch_qry,email);
+            bool Alreay_A_Member = obj.ExistingUser(email);
 
             if (Alreay_A_Member)
             {
@@ -27,8 +26,7 @@ namespace Blood_Donor_Portal
             }
             else
             {
-                string ins_qry = "insert into Users values ('" + mail.Text + "','" + uname.Text + "','" + pwd.Text + "')";
-                obj.NewUserRegistraion(ins_qry);
+                obj.NewUserRegistraion(mail.Text, uname.Text, pwd.Text);
                 Response.Redirect("login.aspx");
             }
         }
